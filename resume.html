@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - UI/UX Designer</title>
+  <style>
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #f5f5f5; /* Light text for dark background */
+  background-color: #1b1b1b; /* Dark background for contrast */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #333333; /* Dark gray header for contrast */
+  color: #ffffff;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: #ff9900; /* Highlight on hover */
+  text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+  background: #252525; /* Darker section for contrast */
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #ff9900; /* Vibrant accent color */
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* About Section */
+#about {
+  padding: 2rem 0;
+  background: #2e2e2e; /* Slightly lighter dark background */
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff9900;
+}
+
+#about p {
+  color: #d9d9d9; /* Softer light text for readability */
+}
+
+/* Skills Section */
+#skills {
+  background: #333333;
+  padding: 2rem 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills-list li {
+  background: #ff9900;
+  color: #1b1b1b; /* Dark text for bright background */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+  padding: 2rem 0;
+  background: #252525;
+}
+
+#projects h2 {
+  color: #ff9900;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  background: #2e2e2e;
+  padding: 1rem;
+  border: 1px solid #ff9900;
+  border-radius: 5px;
+}
+
+.project h3, a{
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.project p {
+  color: #d9d9d9;
+}
+
+/* Contact Section */
+#contact {
+  background: #1b1b1b;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 1rem auto 0;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ff9900;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #252525;
+  color: #f5f5f5;
+}
+
+#contact form button {
+  background: #ff9900;
+  color: #1b1b1b;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contact form button:hover {
+  background: #cc7a00; /* Slightly darker orange */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #252525; /* Matches the dark theme */
+  color: #f5f5f5;
+}
+
+footer a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #hero .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  #hero .hero-content p {
+    font-size: 1rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  #contact form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  #hero .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .skills-list li {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .project {
+    padding: 0.8rem;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  #contact form button {
+    padding: 0.6rem;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Shahbaj Khan </h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Portfolio</h2>
+      <p>UI/UX Designer || Simple Web Developer </p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate UI/UX designer with skills in HTML, CSS and design tools like Figma, Adobe Photoshop, and CorelDRAW. With a background in graphic design and a keen eye for aesthetics, I aim to craft user-friendly and visually appealing digital experiences.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML & CSS</li>
+        <li>Figma</li>
+        <li>Adobe Photoshop</li>
+        <li>CorelDRAW</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h3><a href="#">Portfolio Website</a></h3>
+          <p>Designed and developed this portfolio using HTML, CSS.</p>
+        </div>
+        <div class="project">
+          <h3><a href="https://www.figma.com/design/9KdRFe6RL1xUcIOhVGO1g2/Untitled?node-id=0-1&t=CHvQ0McsUAxrh3Xt-1">Indain advocate UI design</a></h3>
+          <p>Created an interactive UI for Indain advocate using Figma.</p>
+        </div>
+        <div class="project">
+          <h3><a href="https://sajidggr.github.io/new/">Digital Agencey webpage</a></h3>
+          <p>Designed and developed Digital Agencey webpage using HTML, CSS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to discuss projects or collaborations!</p>
+      <form action="https://formsubmit.co/7a937656cef04f3d23c42b80e633d8ac" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input  type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Shahbaj Khan . All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
